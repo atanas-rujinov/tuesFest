@@ -27,5 +27,4 @@
 * **Лора Иванова** - *дизайнер* - [loraiv](github.com/loraiv)
 
 
-
-https://discord.com/channels/957240221387350076/957242141158043728/958771580941512714
+https://prod.liveshare.vsengsaas.visualstudio.com/join?9FC45849193B90EE67722DE2A83E7D16AF18
