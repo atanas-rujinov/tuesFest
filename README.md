@@ -25,3 +25,7 @@
 * **Атнас Ружинов** - *програмист* - [atanas-rujinov](github.com/atanas-rujinov)
 * **Светослав Иванов** - *програмист* - [svetoslav-ivanov123](github.com/svetoslav-ivanov123)
 * **Лора Иванова** - *дизайнер* - [loraiv](github.com/loraiv)
+
+
+
+https://discord.com/channels/957240221387350076/957242141158043728/958771580941512714
