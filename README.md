@@ -25,3 +25,4 @@
 * **Атнас Ружинов** - *програмист* - [atanas-rujinov](github.com/atanas-rujinov)
 * **Светослав Иванов** - *програмист* - [svetoslav-ivanov123](github.com/svetoslav-ivanov123)
 * **Лора Иванова** - *дизайнер* - [loraiv](github.com/loraiv)
+* **Кристиян Андреев** - *програмист* - [Phantomvv1](github.com/Phantomvv1)
