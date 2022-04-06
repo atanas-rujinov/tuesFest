@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PixGame</title>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <script src="Tues Fest.js"></script>
+    <button
+      onclick="window.location.reload(); location.reload();"
+      class="restart"
+    >
+      Restart
+    </button>
+    <button onclick="speed = 5" class="speedS">Slow speed</button>
+    <button onclick="speed = 10" class="speedN">Normal speed</button>
+    <button onclick="speed = 15" class="speedF">Fast speed</button>
+    <style>
+      canvas {
+        border: 2px solid black;
+      }
+      button.restart {
+        margin: 0;
+        position: absolute;
+        top: 96%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      button.speedS {
+        margin: 0;
+        position: absolute;
+        top: 99%;
+        left: 40%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      button.speedN {
+        margin: 0;
+        position: absolute;
+        top: 99%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      button.speedF {
+        margin: 0;
+        position: absolute;
+        top: 99%;
+        left: 60%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </body>
+</html>
