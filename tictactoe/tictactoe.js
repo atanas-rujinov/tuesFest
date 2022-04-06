@@ -109,7 +109,7 @@ class Game  {
             document.getElementById("winner").innerHTML = "Winner: 0"
             this.points[0]++
             console.log(this.points)
-            return 1
+            return 1 // ;)
         }
 
         return 0
