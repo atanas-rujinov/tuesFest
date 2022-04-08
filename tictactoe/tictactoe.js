@@ -145,18 +145,14 @@ class Game  {
                 document.getElementById("winner").innerHTML = "Winner: tie"
             }
 
-            if(this.people == false)    {
-                this.count++
-                if(this.count != 8 && flag != 1)  {
-                    console.log("flag = ", flag)
-                    this.ComputerTurnEasy()
-                    flag = this.endMessage(this.winCheck())
-                }else   {
-                    flag = 1
-                    if(this.count > 9)
-                        document.getElementById("winner").innerHTML = "Winner: tie"
-                }
-                    
+            if(this.people == false && flag != 1)    {
+                    this.count++
+                    if(this.count < 9 && flag != 1)  {
+                        console.log("flag = ", flag)
+                        this.ComputerTurnEasy()
+                        flag = this.endMessage(this.winCheck())
+                    }else
+                        flag = 1
             }
         }
         return flag
@@ -220,6 +216,7 @@ class Game  {
     }
 
     game()  {
+        document.getElementById("winner").innerHTML = "Winner:    "
         this.startGame()
         this.generateFirstFrame()
         this.mouseClick()
@@ -229,13 +226,10 @@ class Game  {
 var game = new Game()
 game.game()
 
-function PersonVsPerson()   {
-    game.people = true
-    game.newGame()
-}
-
-function PersonVsComp()   {
-    game.people = false
+function PersonOrComp()   {
+    game.people = (game.people != true ? true : false)
+    document.getElementById("PersonOrComp").innerHTML = (game.people == true ? "person vs computer" : "person vs person")
+    document.getElementById("mode").innerHTML = (game.people != true ? "person vs computer" : "person vs person")
     game.newGame()
 }
 
