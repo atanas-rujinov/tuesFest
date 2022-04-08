@@ -109,7 +109,7 @@ class Game  {
             document.getElementById("winner").innerHTML = "Winner: 0"
             this.points[0]++
             console.log(this.points)
-            return 1 // ;)
+            return 1
         }
 
         return 0
@@ -217,6 +217,7 @@ class Game  {
 
     game()  {
         document.getElementById("winner").innerHTML = "Winner:    "
+        document.getElementById("mode").innerHTML = (game.people != true ? "person vs computer" : "person vs person")
         this.startGame()
         this.generateFirstFrame()
         this.mouseClick()
