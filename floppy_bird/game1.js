@@ -68,11 +68,37 @@ var highscore = 0;
  
 //check collision function
 function colliding(){
-    if((bird.birdX+36 >= bar1.pos && bird.birdX <= bar1.pos+50) && (bird.birdY <= bar1.upperHeight || bird.birdY+21 >= 450-bar1.lowerHight)) return true;
+    /*if((bird.birdX+36 >= bar1.pos && bird.birdX <= bar1.pos+50) && (bird.birdY <= bar1.upperHeight || bird.birdY+21 >= 450-bar1.lowerHight)) return true;
     if((bird.birdX+36 >= bar2.pos && bird.birdX <= bar2.pos+50) && (bird.birdY <= bar2.upperHeight || bird.birdY+21 >= 450-bar2.lowerHight)) return true;
     if((bird.birdX+36 >= bar3.pos && bird.birdX <= bar3.pos+50) && (bird.birdY <= bar3.upperHeight || bird.birdY+21 >= 450-bar3.lowerHight)) return true;
     if((bird.birdX+36 >= bar4.pos && bird.birdX <= bar4.pos+50) && (bird.birdY <= bar4.upperHeight || bird.birdY+21 >= 450-bar4.lowerHight)) return true;
-    if(bird.birdY<=0 || bird.birdY+20>=450) return true;
+    if(bird.birdY<=0 || bird.birdY+20>=450) return true;*/
+
+    //tail
+    if((bird.birdX+5 >= bar1.pos && bird.birdX <= bar1.pos+50) && (bird.birdY+10 <= bar1.upperHeight || bird.birdY+15 >= 450-bar1.lowerHight)) return true;
+    if((bird.birdX+5 >= bar2.pos && bird.birdX <= bar2.pos+50) && (bird.birdY+10 <= bar2.upperHeight || bird.birdY+15 >= 450-bar2.lowerHight)) return true;
+    if((bird.birdX+5 >= bar3.pos && bird.birdX <= bar3.pos+50) && (bird.birdY+10 <= bar3.upperHeight || bird.birdY+15 >= 450-bar3.lowerHight)) return true;
+    if((bird.birdX+5 >= bar4.pos && bird.birdX <= bar4.pos+50) && (bird.birdY+10 <= bar4.upperHeight || bird.birdY+15 >= 450-bar4.lowerHight)) return true;
+
+    //body
+    if((bird.birdX+22 >= bar1.pos && bird.birdX+6 <= bar1.pos+50) && (bird.birdY+5 <= bar1.upperHeight || bird.birdY+21 >= 450-bar1.lowerHight)) return true;
+    if((bird.birdX+22 >= bar2.pos && bird.birdX+6 <= bar2.pos+50) && (bird.birdY+5 <= bar2.upperHeight || bird.birdY+21 >= 450-bar2.lowerHight)) return true;
+    if((bird.birdX+22 >= bar3.pos && bird.birdX+6 <= bar3.pos+50) && (bird.birdY+5 <= bar3.upperHeight || bird.birdY+21 >= 450-bar3.lowerHight)) return true;
+    if((bird.birdX+22 >= bar4.pos && bird.birdX+6 <= bar4.pos+50) && (bird.birdY+5 <= bar4.upperHeight || bird.birdY+21 >= 450-bar4.lowerHight)) return true;
+
+    //neck
+    if((bird.birdX+26 >= bar1.pos && bird.birdX+23 <= bar1.pos+50) && (bird.birdY <= bar1.upperHeight || bird.birdY+21 >= 450-bar1.lowerHight)) return true;
+    if((bird.birdX+26 >= bar2.pos && bird.birdX+23 <= bar2.pos+50) && (bird.birdY <= bar2.upperHeight || bird.birdY+21 >= 450-bar2.lowerHight)) return true;
+    if((bird.birdX+26 >= bar3.pos && bird.birdX+23 <= bar3.pos+50) && (bird.birdY <= bar3.upperHeight || bird.birdY+21 >= 450-bar3.lowerHight)) return true;
+    if((bird.birdX+26 >= bar4.pos && bird.birdX+23 <= bar4.pos+50) && (bird.birdY <= bar4.upperHeight || bird.birdY+21 >= 450-bar4.lowerHight)) return true;
+
+    //head
+    if((bird.birdX+36 >= bar1.pos && bird.birdX+27 <= bar1.pos+50) && (bird.birdY <= bar1.upperHeight || bird.birdY+12 >= 450-bar1.lowerHight)) return true;
+    if((bird.birdX+36 >= bar2.pos && bird.birdX+27 <= bar2.pos+50) && (bird.birdY <= bar2.upperHeight || bird.birdY+12 >= 450-bar2.lowerHight)) return true;
+    if((bird.birdX+36 >= bar3.pos && bird.birdX+27 <= bar3.pos+50) && (bird.birdY <= bar3.upperHeight || bird.birdY+12 >= 450-bar3.lowerHight)) return true;
+    if((bird.birdX+36 >= bar4.pos && bird.birdX+27 <= bar4.pos+50) && (bird.birdY <= bar4.upperHeight || bird.birdY+12 >= 450-bar4.lowerHight)) return true;
+
+
     return false;
 }
 
@@ -155,8 +181,8 @@ function game(){
 
     context.drawImage(document.getElementById("upperBar"), bar1.pos, -360+bar1.upperHeight, 50, 360);
     context.drawImage(document.getElementById("lowerBar"), bar1.pos, 450-bar1.lowerHight, 50, bar1.lowerHight);
-    context.drawImage(document.getElementById("upperBar"), bar2.pos, -bar2.upperHeight, 50, 360);
-    context.drawImage(document.getElementById("lowerBar"), bar2.pos, 450-360+bar2.lowerHight, 50, bar2.lowerHight);
+    context.drawImage(document.getElementById("upperBar"), bar2.pos, -360+bar2.upperHeight, 50, 360);
+    context.drawImage(document.getElementById("lowerBar"), bar2.pos, 450-bar2.lowerHight, 50, bar2.lowerHight);
     context.drawImage(document.getElementById("upperBar"), bar3.pos, -360+bar3.upperHeight, 50, 360);
     context.drawImage(document.getElementById("lowerBar"), bar3.pos, 450-bar3.lowerHight, 50, bar3.lowerHight);
     context.drawImage(document.getElementById("upperBar"), bar4.pos, -360+bar4.upperHeight, 50, 360);
