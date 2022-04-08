@@ -33,6 +33,7 @@ class Tetris    {
         this.currpos
         this.nextpiece = []
         this.interval
+        this.end_game = false
     }
 
     Updater()   {
@@ -111,16 +112,18 @@ class Tetris    {
                     }
                     break
                 case "ArrowDown":
-                    clearInterval(this.interval)
-                    this.speed = 100
-                    this.gameLoop()
+                    if(this.end_game != true && this.speed != 100)  {
+                        clearInterval(this.interval)
+                        this.speed = 100
+                        this.gameLoop()
+                    }
                     break
             }
         })
 
         document.addEventListener("keyup", (event) => {
             console.log(event.code)
-            if(event.code == "ArrowDown")  {
+            if(event.code == "ArrowDown" && this.end_game != true)  {
                 clearInterval(this.interval)
                 this.speed = 750
                 this.gameLoop()
@@ -219,7 +222,10 @@ class Tetris    {
                             this.board[i + this.time][j + this.currpos] = this.currpiece[i][j]
                     }
                 }
-                if(this.rowCheck() == false) clearInterval(this.interval)
+                if(this.rowCheck() == false)    {
+                    clearInterval(this.interval)
+                    this.end_game = true
+                }
                 document.getElementById("result2").innerHTML = "points = " + this.points
                 this.pieceGen((Math.random() * 100).toFixed(0) % 7 + 1)
             }
@@ -263,7 +269,7 @@ class Tetris    {
         var x, y, i, j, leny = this.currpiece.length, lenx = this.currpiece[0].length, flag = false
         for(i = 0, y = this.time; i < leny; i++, y++)    {
             for(j = 0, x = this.currpos; j < lenx; j++, x++)    {
-                if(this.currpiece[i][j] != 0 && this.board[y][x] != 0)  {
+                if(y >= 0 && this.currpiece[i][j] != 0 && this.board[y][x] != 0)  {
                     flag = true
                     break
                 }
