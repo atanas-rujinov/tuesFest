@@ -153,13 +153,13 @@ function game(){
     
     context.drawImage(document.getElementById("backgroundImage"), 0, 0, 702, 450);
 
-    context.drawImage(document.getElementById("upperBar"), bar1.pos, 0-bar1.upperHeight, 50, 360);
+    context.drawImage(document.getElementById("upperBar"), bar1.pos, -360+bar1.upperHeight, 50, 360);
     context.drawImage(document.getElementById("lowerBar"), bar1.pos, 450-bar1.lowerHight, 50, bar1.lowerHight);
-    context.drawImage(document.getElementById("upperBar"), bar2.pos, 0-bar2.upperHeight, 50, 360);
-    context.drawImage(document.getElementById("lowerBar"), bar2.pos, 450-bar2.lowerHight, 50, bar2.lowerHight);
-    context.drawImage(document.getElementById("upperBar"), bar3.pos, 0-bar3.upperHeight, 50, 360);
+    context.drawImage(document.getElementById("upperBar"), bar2.pos, -bar2.upperHeight, 50, 360);
+    context.drawImage(document.getElementById("lowerBar"), bar2.pos, 450-360+bar2.lowerHight, 50, bar2.lowerHight);
+    context.drawImage(document.getElementById("upperBar"), bar3.pos, -360+bar3.upperHeight, 50, 360);
     context.drawImage(document.getElementById("lowerBar"), bar3.pos, 450-bar3.lowerHight, 50, bar3.lowerHight);
-    context.drawImage(document.getElementById("upperBar"), bar4.pos, 0-bar4.upperHeight, 50, 360);
+    context.drawImage(document.getElementById("upperBar"), bar4.pos, -360+bar4.upperHeight, 50, 360);
     context.drawImage(document.getElementById("lowerBar"), bar4.pos, 450-bar4.lowerHight, 50, bar4.lowerHight);
 
     if(framegap==9){
