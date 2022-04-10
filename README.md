@@ -7,6 +7,9 @@
 ## За проекта:
 ![poster](https://i.imgur.com/Jv8MfH3.png)
 
+
+### [**Презентация**](https://docs.google.com/presentation/d/147IdthTctm-LUCO9MZdY5OzbhXLGLTxd3vYhytkCE_4/edit#slide=id.g11b033a400b_1_4)
+
 ## Използвани технологии
 
 * HTML
