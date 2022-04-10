@@ -13,7 +13,7 @@
 * CSS
 * Javascript
 
-## Информация за авторите на проекта
+## За авторите на проекта
 
 * **Атнас Ружинов** - *програмист, дизайнер* - [atanas-rujinov](github.com/atanas-rujinov)
 * **Светослав Иванов** - *програмист* - [svetoslav-ivanov123](github.com/svetoslav-ivanov123)
