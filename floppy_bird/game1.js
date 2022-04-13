@@ -50,7 +50,7 @@ window.onload = function(){
                 bar4.upperHeight = 360 - bar4.lowerHight;
                 
                 bird.birdY = 195;
-                barsLoop = setInterval(game, 30);
+                barsLoop = setInterval(game, 23);
                 birdLoop = setInterval(gif, 350);
                 gameStatus = "running";
                 console.log(gameStatus);
@@ -173,7 +173,7 @@ function game(){
     } else bar4.pos -= 1;
 
     //gravity
-    bird.birdY+=2;
+    bird.birdY++;
     
     //drawing
     
