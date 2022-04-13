@@ -5,18 +5,19 @@ gap = 60
 */
 
 window.addEventListener('keydown', function (e) {
-    if(e.key == " ") bird.birdY-=40;
+    if(e.key == " ") bird.birdY-=25*speed;
 })
 
 var gameStatus = "start";
 var barsLoop, birdLoop;
+var speed=1;
 
 window.onload = function(){
     document.getElementById('button').onclick = function(){
         switch(gameStatus){
             case "start":
                 gameStatus = "running";
-                barsLoop = setInterval(game, 30);
+                barsLoop = setInterval(game, 25);
                 birdLoop = setInterval(gif, 350);
                 document.getElementById("button").innerHTML = "FLY";
                 document.getElementById("button").blur();
@@ -50,7 +51,7 @@ window.onload = function(){
                 bar4.upperHeight = 360 - bar4.lowerHight;
                 
                 bird.birdY = 195;
-                barsLoop = setInterval(game, 23);
+                barsLoop = setInterval(game, 25);
                 birdLoop = setInterval(gif, 350);
                 gameStatus = "running";
                 console.log(gameStatus);
@@ -98,6 +99,7 @@ function colliding(){
     if((bird.birdX+36 >= bar3.pos && bird.birdX+27 <= bar3.pos+50) && (bird.birdY <= bar3.upperHeight || bird.birdY+12 >= 450-bar3.lowerHight)) return true;
     if((bird.birdX+36 >= bar4.pos && bird.birdX+27 <= bar4.pos+50) && (bird.birdY <= bar4.upperHeight || bird.birdY+12 >= 450-bar4.lowerHight)) return true;
 
+    if(bird.birdY<=0 || bird.birdY+36>=450) return true;
 
     return false;
 }
@@ -152,28 +154,28 @@ function game(){
         bar1.pos = 886;
         bar1.lowerHight = Math.floor(Math.random() * 360);
         bar1.upperHeight = 360 - bar1.lowerHight;
-    } else bar1.pos -= 1;
+    } else bar1.pos -= speed;
 
     if(bar2.pos < -50){
         bar2.pos = 886;
         bar2.lowerHight = Math.floor(Math.random() * 360);
         bar2.upperHeight = 350 - bar2.lowerHight;
-    } else bar2.pos -= 1;
+    } else bar2.pos -= speed;
 
     if(bar3.pos < -50){
         bar3.pos = 886;
         bar3.lowerHight = Math.floor(Math.random() * 360);
         bar3.upperHeight = 360 - bar3.lowerHight;
-    } else bar3.pos -= 1;
+    } else bar3.pos -= speed;
 
     if(bar4.pos < -50){
         bar4.pos = 886;
         bar4.lowerHight = Math.floor(Math.random() * 360);
         bar4.upperHeight = 360 - bar4.lowerHight;
-    } else bar4.pos -= 1;
+    } else bar4.pos -= speed;
 
     //gravity
-    bird.birdY++;
+    bird.birdY+=speed;
     
     //drawing
     
@@ -203,6 +205,9 @@ function game(){
         document.getElementById("button").innerHTML = "RESTART";
     } else{
         score++;
+        if(score%2000==0){
+            speed++;
+        }
         if(score>highscore){
             highscore = score;
             document.getElementById("newHighscoreText").innerHTML = "NEW HIGHSCORE!";
