@@ -4,9 +4,9 @@ bars width = 50
 gap = 60
 */
 
-document.getElementById("button").addEventListener("dblclick", function(e) {
+/*document.getElementById("button").addEventListener("dblclick", function(e) {
     e.preventDefault();
-});
+});*/
 
 window.addEventListener('keydown', function (e) {
     e.preventDefault();
