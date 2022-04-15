@@ -10,12 +10,30 @@
         <img src="lowerBar.png" id="lowerBar" style="display: none;">
         <img src="upperBar.png" id="upperBar" style="display: none;">
     </head>
-    <body>
+    <body style="background-color: #d781ff;">
+        <style>
+            canvas{
+                display: block;
+                margin-left:auto;
+                margin-right:auto
+            }
+            button{ 
+                display: block;
+                margin-left:auto;
+                margin-right:auto
+            }
+            p{
+                display: block;
+                text-align: center;
+                margin-left:auto;
+                margin-right:auto
+            }
+        </style>
         <canvas id="canvas1" width="702" height="450" style="border:1px solid #000000"></canvas>
         <script src="game1.js"></script>
         <br>
-        <button id="button" style="height: 100px; width: 100px; margin: 70px; touch-action: none;">START</button>
-        <p>Score: <span id="scoreText"></span></p>
+        <button id="button" style="height: 100px; width: 100px; touch-action: none;">START</button>
+        <p style="font: #0026ff">Score: <span id="scoreText"></span></p>
         <p>Highscore: <span id="highscoreText"></span></p>
         <p id="newHighscoreText"></p>
         <div id="homepage"> 

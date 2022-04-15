@@ -35,7 +35,7 @@ window.onload = function(){
             
             case "restart":
                 score = 0;
-                document.getElementById("newHighscoreText").innerHTML = " ";
+                document.getElementById("newHighscoreText").innerHTML = "<br>";
                 document.getElementById("button").blur();
                 document.getElementById("button").innerHTML = "FLY";
                 
