@@ -1,6 +1,6 @@
-# ***[PixGame](https://t.ly/pixgame)***
+# ***[PixGame](https://tinyurl.com/pixgame)***
 
-[![PixGame](https://i.imgur.com/rdG9cLl.png)](https://t.ly/pixgame)
+[![PixGame](https://i.imgur.com/rdG9cLl.png)](https://tinyurl.com/pixgame)
 
 *Проектът ни представлява сайт с няколко мини игри в аркаден стил.*
 
