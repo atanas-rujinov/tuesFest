@@ -73,7 +73,7 @@ function startGameMenu(){
     ctx.fillStyle = "Black";
     ctx.font = '150px "Black"';
     ctx.textAlign = 'center';
-    ctx.fillText("Capture the green squere!", canvas.width / 2, canvas.height / 4);
+    ctx.fillText("Capture the green square!", canvas.width / 2, canvas.height / 4);
     ctx.font = '50px "Black"';
     ctx.fillText("Start", canvas.width / 2, canvas.height / 2);
     ctx.font = '25px "Black"';
