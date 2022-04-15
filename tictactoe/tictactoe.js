@@ -44,9 +44,14 @@ class Game  {
         for(y = 0; y < 3; y++)  {
             key = this.positions[y][0]
             if(key != 0)    {
-                if(this.positions[y].every((value) => {
-                    return (key == value)
-                }) == true) {
+                tmp = key
+                for(x = 0; x < 3; x++)  {
+                    if(this.positions[y][x] != key) {
+                        tmp = 0
+                        break
+                    }
+                }
+                if(tmp != 0)    {
                     return key
                 }
             }
@@ -149,7 +154,7 @@ class Game  {
                     this.count++
                     if(this.count < 9 && flag != 1)  {
                         console.log("flag = ", flag)
-                        this.ComputerTurnEasy()
+                        this.ComputerTurnMedium()
                         flag = this.endMessage(this.winCheck())
                     }else
                         flag = 1
@@ -167,6 +172,41 @@ class Game  {
         console.log([x, y])
         this.positions[y][x] = 1
         this.imageGen(x, y, 0)
+    }
+    
+    ComputerTurnMedium()  {
+        var x, y
+        for(y = 0; y < 3; y++)  {
+            for(x = 0; x < 3; x++)  {
+                if(this.positions[y][x] == 0)   {
+                    this.positions[y][x] = 1
+                    if(this.winCheck() != 0)    {
+                        this.imageGen(x, y, 0)
+                        return
+                    }
+
+                    this.positions[y][x] = 0
+                }
+            }
+        }
+
+        for(y = 0; y < 3; y++)  {
+            for(x = 0; x < 3; x++)  {
+                if(this.positions[y][x] == 0)   {
+
+                    this.positions[y][x] = 2
+                    if(this.winCheck() != 0)    {
+                        this.positions[y][x] = 1
+                        this.imageGen(x, y, 0)
+                        return
+                    }
+
+                    this.positions[y][x] = 0
+                }
+            }
+        }
+
+        this.ComputerTurnEasy()
     }
 
     mouseClick()    {
