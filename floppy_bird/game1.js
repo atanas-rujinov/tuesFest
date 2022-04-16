@@ -41,7 +41,8 @@ window.onload = function(){
                 break;
                 
             case "running":
-                bird.birdY-=40;
+                flyLoop = setInterval(jump, 2);
+                flyIndex=0;
                 document.getElementById("button").blur();
                 break;
             
