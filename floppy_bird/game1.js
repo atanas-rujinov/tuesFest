@@ -8,22 +8,14 @@ gap = 60
     e.preventDefault();
 });*/
 
-var flyLoop;
-var flyIndex;
+
 
 window.addEventListener('keydown', function (e) {
     if(e.key == " "){
         e.preventDefault();
-        flyLoop = setInterval(jump, 2);
-        flyIndex=0;
+        bird.birdY-=speed*25;
     }
 })
-
-function jump(){
-    bird.birdY--;
-    flyIndex++;
-    if(flyIndex==27) clearInterval(flyLoop);
-}
 
 var gameStatus = "start";
 var barsLoop, birdLoop;
@@ -41,13 +33,13 @@ window.onload = function(){
                 break;
                 
             case "running":
-                flyLoop = setInterval(jump, 2);
-                flyIndex=0;
+                bird.birdY-=speed;
                 document.getElementById("button").blur();
                 break;
             
             case "restart":
                 score = 0;
+                flyIndex=0;
                 document.getElementById("newHighscoreText").innerHTML = "<br>";
                 document.getElementById("button").blur();
                 document.getElementById("button").innerHTML = "FLY";
