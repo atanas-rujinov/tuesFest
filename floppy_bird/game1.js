@@ -33,7 +33,7 @@ window.onload = function(){
                 break;
                 
             case "running":
-                bird.birdY-=speed;
+                bird.birdY-=25*speed;
                 document.getElementById("button").blur();
                 break;
             
