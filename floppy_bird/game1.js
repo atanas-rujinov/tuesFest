@@ -13,7 +13,7 @@ gap = 60
 window.addEventListener('keydown', function (e) {
     if(e.key == " "){
         e.preventDefault();
-        bird.birdY-=speed*30;
+        bird.birdY-=speed*45;
     }
 })
 
@@ -33,7 +33,7 @@ window.onload = function(){
                 break;
                 
             case "running":
-                bird.birdY-=speed*30;
+                bird.birdY-=speed*45;
                 document.getElementById("button").blur();
                 break;
             
