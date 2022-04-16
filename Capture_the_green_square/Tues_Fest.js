@@ -71,7 +71,7 @@ window.addEventListener('keyup', function(event){
 function startGameMenu(){
     end();
     ctx.fillStyle = "Black";
-    ctx.font = '150px "Black"';
+    ctx.font = '90px "Black"';
     ctx.textAlign = 'center';
     ctx.fillText("Capture the green square!", canvas.width / 2, canvas.height / 4);
     ctx.font = '50px "Black"';
