@@ -26,7 +26,7 @@ window.onload = function(){
         switch(gameStatus){
             case "start":
                 gameStatus = "running";
-                barsLoop = setInterval(game, 25);
+                barsLoop = setInterval(game, 35);
                 birdLoop = setInterval(gif, 350);
                 document.getElementById("button").innerHTML = "FLY";
                 document.getElementById("button").blur();
@@ -61,7 +61,7 @@ window.onload = function(){
                 bar4.upperHeight = 360 - bar4.lowerHight;
                 
                 bird.birdY = 195;
-                barsLoop = setInterval(game, 25);
+                barsLoop = setInterval(game, 35);
                 birdLoop = setInterval(gif, 350);
                 gameStatus = "running";
                 console.log(gameStatus);
