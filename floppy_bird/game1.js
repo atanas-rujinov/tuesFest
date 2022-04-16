@@ -185,7 +185,7 @@ function game(){
     } else bar4.pos -= speed;
 
     //gravity
-    bird.birdY+=speed*2;
+    bird.birdY+=speed*3;
     
     //drawing
     
