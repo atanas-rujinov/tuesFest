@@ -1,3 +1,7 @@
+window.addEventListener('keydown', function (e) {
+    if(e.key == " ") e.preventDefault;
+})
+
 class Tetris    {
     constructor()   {
         this.canvas = document.getElementById("canvas")
@@ -80,7 +84,8 @@ class Tetris    {
 
     leftRight() {
         document.addEventListener("keydown", (event) => {
-            console.log(event.code)
+            console.log(event.code);
+            event.preventDefault();
             switch(event.code)   {
                 case "ArrowLeft":
                     if(this.currpos != 0)   {
