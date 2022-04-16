@@ -40,6 +40,7 @@ window.onload = function(){
             case "restart":
                 score = 0;
                 flyIndex=0;
+                speed=0;
                 document.getElementById("newHighscoreText").innerHTML = "<br>";
                 document.getElementById("button").blur();
                 document.getElementById("button").innerHTML = "FLY";
