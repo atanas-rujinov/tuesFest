@@ -13,7 +13,7 @@ gap = 60
 window.addEventListener('keydown', function (e) {
     if(e.key == " "){
         e.preventDefault();
-        bird.birdY-=speed*45;
+        bird.birdY-=speed*30;
     }
 })
 
@@ -185,7 +185,7 @@ function game(){
     } else bar4.pos -= speed;
 
     //gravity
-    bird.birdY+=speed*3;
+    bird.birdY+=speed*2;
     
     //drawing
     
