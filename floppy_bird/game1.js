@@ -31,7 +31,7 @@ window.onload = function(){
                 gameStatus = "running";
                 barsLoop = setInterval(game, 35);
                 birdLoop = setInterval(gif, 350);
-                document.getElementById("button").innerHTML = "FLY";
+                document.getElementById("button").innerHTML = "<p><b>FLY<b></p>";
                 document.getElementById("button").blur();
                 break;
                 
@@ -46,7 +46,7 @@ window.onload = function(){
                 speed=1;
                 document.getElementById("newHighscoreText").innerHTML = "<br>";
                 document.getElementById("button").blur();
-                document.getElementById("button").innerHTML = "FLY";
+                document.getElementById("button").innerHTML = "<p><b>FLY<b></p>";
                 
                 bar1.pos = 130;
                 bar1.lowerHeight = 185;
@@ -221,7 +221,7 @@ function game(){
         clearInterval(barsLoop);
         clearInterval(birdLoop);
         gameStatus = "restart";
-        document.getElementById("button").innerHTML = "RESTART";
+        document.getElementById("button").innerHTML = "<p><b>RESTART<b></p>";
     } else{
         score++;
         if(score%200==0 && speedChallenge){
