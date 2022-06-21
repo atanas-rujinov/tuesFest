@@ -204,8 +204,8 @@ class Tetris    {
     }
 
     GAME()  {
-        document.getElementById("result").innerHTML = "Game is running"
-        document.getElementById("result2").innerHTML = "points: " + this.points
+        document.getElementById("result").innerHTML = "GAME RUNNING"
+        document.getElementById("result2").innerHTML = "POINTS: " + this.points
         this.leftRight()
         this.pieceGen((Math.random() * 100).toFixed(0) % 7 + 1)
         this.pieceGen((Math.random() * 100).toFixed(0) % 7 + 1)
@@ -231,7 +231,7 @@ class Tetris    {
                     clearInterval(this.interval)
                     this.end_game = true
                 }
-                document.getElementById("result2").innerHTML = "points = " + this.points
+                document.getElementById("result2").innerHTML = "POINTS: " + this.points
                 this.pieceGen((Math.random() * 100).toFixed(0) % 7 + 1)
             }
         }, this.speed)
@@ -309,7 +309,7 @@ class Tetris    {
 
         if(end == true) {
             console.log("Game over")
-            document.getElementById("result").innerHTML = "Game over"
+            document.getElementById("result").innerHTML = "GAME OVER"
         }
 
         
