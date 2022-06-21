@@ -23,21 +23,35 @@
                 margin-right:auto
             }
             p{
-                display: block;
+                font-family: Lucida Console;
+				display: block;
                 text-align: center;
                 margin-left:auto;
                 margin-right:auto
             }
+			a:link {
+				text-decoration:  none;
+			}
+			a:visited {
+				text-decoration:  none;
+			}
+			a:hover {
+				text-decoration:  none;
+			}
+			a:active	 {
+				text-decoration:  none;
+			}
+			
         </style>
-        <canvas id="canvas1" width="702" height="450" style="border:1px solid #000000"></canvas>
+        <canvas id="canvas1" width="702" height="450" style="border:3px solid #000000"></canvas>
         <script src="game1.js"></script>
         <br>
-        <button id="button" style="height: 100px; width: 100px; touch-action: none;">START</button>
-        <p style="font: #0026ff">Score: <span id="scoreText"></span></p>
-        <p>Highscore: <span id="highscoreText"></span></p>
-        <p id="newHighscoreText"></p>
+        <button id="button" style="height: 100px; width: 100px; touch-action: none;"><p><b>START<b></p></button>
+        <p><b>Score: <span id="scoreText"></span></b></p>
+        <p><b>Highscore: <span id="highscoreText"></span></b></p>
+        <b><p id="newHighscoreText"></p></b>
         <div id="homepage"> 
-            <a href="../index.html"><button>Back to homepage</button></a>
+            <a href="../index.html"><button><p><b>Back to homepage<b></p></button></a>
         </div>
     </body>
 </html>
