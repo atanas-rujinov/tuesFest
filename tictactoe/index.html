@@ -5,20 +5,30 @@
         <title>Tic-Tac-Toe</title>
     </head>
     <body>
+		<style>
+			body{
+				background-image: url("wood.webp");
+			}
+			p{
+				font-family: Comic Sans MS;
+				
+			}
+		</style>
         <center>
-        <output id="winner"></output>
-        <br>
+        <p><output id="winner"></output><p>
+        
         <output id="mode"></output>
-        <br>
+        <br><br>
         <canvas id="canvas" width="500" height="500" style="border:1px solid #000000"></canvas>
         <br><br>
-        <button id="PersonOrComp" onclick="PersonOrComp()">person vs computer</button>
+        <button id="PersonOrComp" onclick="PersonOrComp()"><p>person vs computer</p></button>
         <br>
-        <button onclick="X()">X</button> or <button onclick="O()">O</button>
+        <button onclick="X()"><p>X</p></button> or <button onclick="O()"><p>O</p></button>
         <br>
-        <button onclick="game.newGame()">New game</button>
+        <button onclick="game.newGame()"><p>New game</p></button>
+		
         <div id="homepage"> 
-            <a href="../index.html"><button>Back to homepage</button></a>
+            <a href="../index.html"><button><p>Back to homepage</p></button></a>
            </div>
         </center>
         <script src="tictactoe.js"></script>
