@@ -6,6 +6,10 @@ p{
     font-family: Lucida Console;
 }
 
+a{
+    text-decoration: none;
+}
+
 body {
     background-color: #6b18cf;
     overflow-x: hidden;
@@ -44,8 +48,6 @@ body {
     align-items: center;
     text-align: center;
     margin-top: 1.5%;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 25px;
     background-color: #29d6dfca;
     width: 50%;
