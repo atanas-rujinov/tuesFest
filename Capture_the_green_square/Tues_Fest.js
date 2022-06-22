@@ -4,7 +4,12 @@ canvas.height = window.innerHeight - 60;
 canvas.width = window.innerWidth - 30;
 document.body.insertBefore(this.canvas, document.body.childNodes[0]);
 
+var frameSide = "left";
+var frameNumber = "1";
+var frameOrder = "1";
+var frame = "left1";
 
+var phantomVersion=Math.floor(Math.random()*2);
 
 window.addEventListener("resize", () => {
     canvas.height = window.innerHeight - 60;
@@ -35,16 +40,28 @@ window.addEventListener('keydown', function(event) {
     event.preventDefault();
     console.log(event.key, event.code);
     if (event.code == "ArrowDown") { // DOWN
-      down = true;
+        if(down) frameNumber++;
+        else frameNumber=1;
+        down = true;
+        frameSide = "down";
     }
     if (event.code == "ArrowUp") { // UP
-      up = true;
+        if(up) frameNumber++;
+        else frameNumber=1;
+        up = true;
+      frameSide = "up";
     }
     if (event.code == "ArrowLeft") { // LEFT
-      left = true;
+        if(left) frameNumber++;
+        else frameNumber=1;
+        left = true;
+      frameSide = "left";
     }
     if (event.code == "ArrowRight") { // RIGHT
-      right = true;
+        if(right) frameNumber++;
+        else frameNumber=1;
+        right = true;
+      frameSide = "right";
     }
   });
 
@@ -161,21 +178,38 @@ function draw(){
 
     if(isWithin(targetX, x, x + sideLength) || isWithin(targetX + targetLength, x, x + sideLength)){
         if(isWithin(targetY, y, y + sideLength) || isWithin(targetY + targetLength, y, y + sideLength)){
+            phantomVersion=Math.floor(Math.random()*2)
             drawTarget();
             score = score + 1;
         }
     }
 
 
-    //Your hero
-    ctx.fillStyle = "Red";
-    ctx.fillRect(x, y, sideLength, sideLength);
+    //backgr
+    ctx.drawImage(document.getElementById("background"),0,0);
 
+    //Your hero
+    /*if(frameNumber%10==0){
+        if(((frameSide=="right" || frameSide=="left") && frameOrder==2) || ((frameSide=="up" || frameSide=="down") && frameOrder==4)) frameOrder=1;
+        else frameOrder++;
+    }
+    frame = frameSide+frameOrder;
+    console.log(document.getElementById(frame));
+    console.log(frame);
+    ctx.drawImage(document.getElementById(frame), x, y, sideLength, sideLength);
+    */
+
+    frame = frameSide+1;
+    ctx.drawImage(document.getElementById(frame), x, y, sideLength, sideLength);
 
     //Target of your hero
-    ctx.fillStyle = "Green";
+    /**ctx.fillStyle = "Green";
     ctx.fillRect(targetX, targetY, targetLength, targetLength);
+    **/
+    
 
+    console.log(phantomVersion);
+    ctx.drawImage(document.getElementById(`phantom${phantomVersion}`), targetX, targetY, targetLength, targetLength);
 
     //Score and time left to play
     ctx.font = '10 px "Black"';
