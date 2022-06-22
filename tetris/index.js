@@ -88,6 +88,7 @@ class Tetris    {
             event.preventDefault();
             switch(event.code)   {
                 case "ArrowLeft":
+                case "KeyH":
                     if(this.currpos != 0)   {
                         this.currpos--
                         console.log(this.currpos)
@@ -101,9 +102,11 @@ class Tetris    {
                     }
                     break
                 case "ArrowUp":
+                case "KeyK":
                     this.rotatePiece()
                     break
                 case "ArrowRight":
+                case "KeyL":
                     if(this.currpos + this.currpiece[0].length - 1 != 9)  {
                         this.currpos++
                         console.log(this.currpos)
@@ -117,6 +120,7 @@ class Tetris    {
                     }
                     break
                 case "ArrowDown":
+                case "KeyJ":
                     if(this.end_game != true && this.speed != 100)  {
                         clearInterval(this.interval)
                         this.speed = 100
@@ -128,7 +132,7 @@ class Tetris    {
 
         document.addEventListener("keyup", (event) => {
             console.log(event.code)
-            if(event.code == "ArrowDown" && this.end_game != true)  {
+            if((event.code == "ArrowDown" || event.code == "KeyJ") && this.end_game != true)  {
                 clearInterval(this.interval)
                 this.speed = 750
                 this.gameLoop()
@@ -204,8 +208,8 @@ class Tetris    {
     }
 
     GAME()  {
-        document.getElementById("result").innerHTML = "GAME RUNNING"
-        document.getElementById("result2").innerHTML = "POINTS: " + this.points
+        document.getElementById("result").innerHTML = "Game is running"
+        document.getElementById("result2").innerHTML = "points: " + this.points
         this.leftRight()
         this.pieceGen((Math.random() * 100).toFixed(0) % 7 + 1)
         this.pieceGen((Math.random() * 100).toFixed(0) % 7 + 1)
@@ -231,7 +235,7 @@ class Tetris    {
                     clearInterval(this.interval)
                     this.end_game = true
                 }
-                document.getElementById("result2").innerHTML = "POINTS: " + this.points
+                document.getElementById("result2").innerHTML = "points = " + this.points
                 this.pieceGen((Math.random() * 100).toFixed(0) % 7 + 1)
             }
         }, this.speed)
@@ -309,10 +313,9 @@ class Tetris    {
 
         if(end == true) {
             console.log("Game over")
-            document.getElementById("result").innerHTML = "GAME OVER"
+            document.getElementById("result").innerHTML = "Game over"
         }
 
-        
         return end
     }
 }
