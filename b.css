@@ -1,0 +1,57 @@
+img{
+    width: 50%;
+}
+
+p{
+    font-family: Lucida Console;
+}
+
+body {
+    background-color: #6b18cf;
+    overflow-x: hidden;
+
+}
+
+.HowToPlay{
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+.HowToPlay a{
+    text-decoration: none;
+    color: unset;
+}
+
+.MainPart{
+    
+    width: 100%;
+}
+
+.logo{
+    width: 13.2%;
+    image-rendering: pixelated;
+}
+
+.logo_div{
+    margin-top: 1.5%;
+    margin-bottom: 6%;
+}
+
+.theDIV{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1.5%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    background-color: #29d6dfca;
+    width: 50%;
+    height: 3em;
+}
+
+.theDIV:hover{
+    background-color: #135aacca;
+}
