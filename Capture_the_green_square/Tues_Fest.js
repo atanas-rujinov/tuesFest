@@ -112,9 +112,19 @@ function startGame(){
 }
 
 
-function drawTarget(){
-    targetX = Math.round(Math.random() * canvas.width - targetLength);
+/*function drawTarget(){
+    targetX = Math.round(Math.random() * canvas.width targetLength);
     targetY = Math.round(Math.random() * canvas.height - targetLength);
+}*/
+
+function drawTarget() {
+
+    targetX = Math.round(Math.random() * canvas.width);
+
+    targetY = Math.round(Math.random() * canvas.height);
+
+    if (targetX > canvas.width - targetLength) targetX -= targetLength;
+    if (targetY > canvas.height - targetLength) targetY = targetLength;
 }
 
 
