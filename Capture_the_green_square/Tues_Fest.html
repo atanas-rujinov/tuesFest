@@ -1,82 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Phantom Hunter</title>
 
-    <img src="right1.png" id="right1" style="display: none">
-    <img src="right2.png" id="right2" style="display: none">
+<head>
+  <meta charset="UTF-8" />
+  <title>Phantom Hunter</title>
 
-    <img src="left1.png" id="left1" style="display: none">
-    <img src="left2.png" id="left2" style="display: none">
+  <img src="right1.png" id="right1" style="display: none">
+  <img src="right2.png" id="right2" style="display: none">
 
-    <img src="up1.png" id="up1" style="display: none">
-    <img src="up2.png" id="up2" style="display: none">
-    <img src="up3.png" id="up3" style="display: none">
-    <img src="up4.png" id="up4" style="display: none">
+  <img src="left1.png" id="left1" style="display: none">
+  <img src="left2.png" id="left2" style="display: none">
 
-    <img src="down1.png" id="down1" style="display: none">
-    <img src="down2.png" id="down2" style="display: none">
-    <img src="down3.png" id="down3" style="display: none">
-    <img src="down4.png" id="down4" style="display: none">
+  <img src="up1.png" id="up1" style="display: none">
+  <img src="up2.png" id="up2" style="display: none">
+  <img src="up3.png" id="up3" style="display: none">
+  <img src="up4.png" id="up4" style="display: none">
 
-    <img src="phantom1.png" id="phantom1" style="display: none">
-    <img src="phantom2.png" id="phantom0" style="display: none">
+  <img src="down1.png" id="down1" style="display: none">
+  <img src="down2.png" id="down2" style="display: none">
+  <img src="down3.png" id="down3" style="display: none">
+  <img src="down4.png" id="down4" style="display: none">
 
-    <img src="backgr.png" id="background" style="display: none">
+  <img src="phantom1.png" id="phantom1" style="display: none">
+  <img src="phantom2.png" id="phantom0" style="display: none">
 
-  </head>
-  <body>
-    <canvas id="canvas"></canvas>
-    <script src="Tues_Fest.js"></script>
-    <button
-      onclick="window.location.reload(); location.reload();"
-      class="restart"
-    >
-      Restart
-    </button>
-    <button onclick="speed = 5" class="speedS">Slow speed</button>
-    <button onclick="speed = 10" class="speedN">Normal speed</button>
-    <button onclick="speed = 15" class="speedF">Fast speed</button>
-    <div id="homepage"> 
-      <a href="../index.html"><button>Back to homepage</button></a>
-     </div>
-    <style>
-      canvas {
-        border: 2px solid black;
-      }
-      button.restart {
-        margin: 0;
-        position: absolute;
-        top: 96%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-      }
-      button.speedS {
-        margin: 0;
-        position: absolute;
-        top: 99%;
-        left: 40%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-      }
-      button.speedN {
-        margin: 0;
-        position: absolute;
-        top: 99%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-      }
-      button.speedF {
-        margin: 0;
-        position: absolute;
-        top: 99%;
-        left: 60%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-      }
-    </style>
-  </body>
+  <img src="backgr.png" id="background" style="display: none">
+
+</head>
+
+<body>
+  <canvas id="canvas"></canvas>
+  <script src="Tues_Fest.js"></script>
+  <button onclick="window.location.reload(); location.reload();" class="restart">
+    Restart
+  </button>
+  <button onclick="speed = 5" class="speedS">Slow speed</button>
+  <button onclick="speed = 10" class="speedN">Normal speed</button>
+  <button onclick="speed = 15" class="speedF">Fast speed</button>
+  <div id="homepage">
+    <a href="../index.html"><button>Back to homepage</button></a>
+  </div>
+  <style>
+    canvas {
+      border: 2px solid black;
+    }
+
+    button{
+      font-family: Lucida Console;
+    }
+
+
+    body{
+      background-color: rgb(52, 97, 52)
+    }
+
+    button.restart {
+      margin: 0;
+      position: absolute;
+      top: 96%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    button.speedS {
+      margin: 0;
+      position: absolute;
+      top: 99%;
+      left: 40%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    button.speedN {
+      margin: 0;
+      position: absolute;
+      top: 99%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    button.speedF {
+      margin: 0;
+      position: absolute;
+      top: 99%;
+      left: 60%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</body>
+
 </html>
