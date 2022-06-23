@@ -190,6 +190,7 @@ function draw(){
         if(isWithin(targetY, y, y + sideLength) || isWithin(targetY + targetLength, y, y + sideLength)){
             phantomVersion=Math.floor(Math.random()*2)
             drawTarget();
+            console.log("HIT");
             score = score + 1;
         }
     }

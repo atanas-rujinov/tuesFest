@@ -1,63 +1,91 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Pixgame</title>
-   <style>
-       body{
+    <style>
+        body {
 
-       background-color: rgb(102, 226, 204);
-       }
+            background-color: rgb(102, 226, 204);
+        }
 
-   </style> 
+        #pixgamelogo {
+            width: 20%;
+            margin: 5%;
+            image-rendering: pixelated;
+        }
+
+        img{
+            display: inline-block;
+        }
+        
+        p{
+            margin-left: 50%;
+        }
+
+        #kakdaigraq{
+            margin-left: -50%;
+            margin-bottom: 20%;
+        }
+        
+    </style>
 </head>
+
 <body>
-    
-    <a href="index.html"><img src="logo11.png" alt="logo" height="100vh" style="vertical-align:middle;margin:50px 650px; image-rendering: pixelated;"></a>
-    <h1 style="margin-left:950px";><code>Как да играя?</code></h1>
- <div>  
-   <div style="float: left"> 
-        <img src="pile1.png"  style="border-style: solid; border-width: 5px; border-color: rgb(0, 0, 0); border-radius:5px;"></a>
+    <center><a href="index.html"><img src="logo11.png" id="pixgamelogo"></a></center>
+    <center><h1 style="margin-left:950px" ;><p id="kakdaigraq">Как да играя?</p></h1></center>
+    <div>
+        <div style="float: left">
+            <img src="pile1.png"
+                style="border-style: solid; border-width: 5px; border-color: rgb(0, 0, 0); border-radius:5px;"></a>
         </div>
-        <pre style="font-size:18px; ">  <code>
+        <div  class="text"><p style="font-size:18px;">
         Floppy bird е игра, в която играчът контролира летящата птица.
   Играчът има задачата да навигира птицата през двойки тръби, които 
   имат еднакво големи пролуки, поставени на произволни височини.
-  Когато докосне някоя от тръбите, играта свършва.</code> </pre>
+  Когато докосне някоя от тръбите, играта свършва.</p></div>
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+    <div>
+        <div style="float: left">
+            <img src="tic.png"
+                style="border-style: solid; border-width: 5px; border-color: rgb(0, 0, 0); border-radius:5px;"></a>
         </div>
-        <br><br><br><br><br><br><br><br><br>
-        <div>
-        <div  style="float: left">
-        <img src="tic.png"  style="border-style: solid; border-width: 5px; border-color: rgb(0, 0, 0); border-radius:5px;"></a>
-        </div>
-        <pre style="font-size:18px; ">  <code>
+        <div class="text">
+        <p style="font-size:18px;">
         Tic-tac-toe е игра, в която двама играчи (двама души или човек и робот) 
   се редуват в избирането квадратче от мрежа (преди играта 
   да започне играчът има право да избере с коя буква
   ще играе-"Х" или "О"), състояща се от девет квадрата. Победителят е първият
   играч, който получи три еднакви символа в редица
-  (вертикално, хоризонтално или по диагонал).</code> </pre>
+  (вертикално, хоризонтално или по диагонал).</p>
+    </div>
     </div>
     <br><br><br><br><br><br><br><br><br>
-        <div>
-            <div  style="float: left">
-            <img src="tetrix.png"  style="border-style: solid; border-width: 5px; border-color: rgb(0, 0, 0); border-radius:5px;"></a>
-            </div>
-            <pre style="font-size:18px; ">  <code>
+    <div>
+        <div style="float: left">
+            <img src="tetrix.png"
+                style="border-style: solid; border-width: 5px; border-color: rgb(0, 0, 0); border-radius:5px;"></a>
+        </div>
+        <p style="font-size:18px; ">
         В играта Tetrix играчът мести падащи форми. Преди фигура да достигне 
   дъното на матрицата, може да я мести и завърти тази форма, за да пасне на 
   желаната от него позиция. Когато играчът запълни цял ред, той изчезва. Играта 
-  свършвa, когато фигурките достигнат най-горния ред.</code> </pre>
+  свършвa, когато фигурките достигнат най-горния ред.</p>
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+    <div>
+        <div style="float: left">
+            <img src="sh.png"
+                style="border-style: solid; border-width: 5px; border-color: rgb(0, 0, 0); border-radius:5px;"></a>
         </div>
-        <br><br><br><br><br><br><br><br><br>
-        <div>
-            <div  style="float: left">
-            <img src="sh.png"  style="border-style: solid; border-width: 5px; border-color: rgb(0, 0, 0); border-radius:5px;"></a>
-            </div>
-            <pre style="font-size:18px; ">  <code> 
+        <p style="font-size:18px; ">
        В играта Capture the green square играчът има 60 секунди, местейки 
   червеното квадратче, да "вземе" зеленото, което след всяко взимане,
   се появява на нова позиция. След като времето изтече, на екрана се изписва 
-  колко пъти  зеленото квадратче е хванато.</code> </pre>
-        </div>   </div>
+  колко пъти  зеленото квадратче е хванато.</p>
+    </div>
+    </div>
 </body>
+
 </html>
